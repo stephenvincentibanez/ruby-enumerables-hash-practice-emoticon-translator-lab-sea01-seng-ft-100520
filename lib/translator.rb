@@ -3,7 +3,7 @@ require 'yaml'
 require 'pry'
 
 def load_library(path)
-  emoticons = YAML.load_file(path)
+  YAML.load_file(path).each 
   final_hash = {}
   binding.pry
   final_hash
