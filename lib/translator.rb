@@ -3,7 +3,7 @@ require 'yaml'
 require 'pry'
 
 def load_library(path)
-  YAML.load_file(path).each 
+  YAML.load_file(path).each do |key, value|
   final_hash = {}
   binding.pry
   final_hash
