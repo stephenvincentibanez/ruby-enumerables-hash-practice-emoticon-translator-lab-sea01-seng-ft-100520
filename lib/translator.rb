@@ -1,9 +1,22 @@
 # require modules here
+require 'yaml'
+require 'pry'
 
-def load_library
-  # code goes here
+def load_library(path)
+  emoticons = YAML.load_file(path)
+  emoticon_hash = {}
+
+emoticons.each do |feeling, emoticon_set|  
+  emoticon_hash[feeling]={}
+  emoticon_hash[emoticon_set]={}
+  emoticon_hash[feeling][:english]=emoticon_set[0]
+  emoticon_hash[feeling][:japanese]=emoticon_set[1]
+  end
+  #binding.pry
+  emoticon_hash
+  #binding.pry
 end
-
+ 
 def get_japanese_emoticon
   # code goes here
 end
