@@ -8,7 +8,7 @@ def load_library(path)
   final_hash[key]={}
   final_hash[key][:english] = value[0]
   final_hash[key][:japanese] = value[1]
-  binding.pry
+  #binding.pry
   
 end
   final_hash
